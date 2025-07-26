@@ -5,7 +5,7 @@ import static java.util.Objects.requireNonNull;
 /*
  * Résoudre le problème suivante:
  *
- * Pour un nombre n, retourner une chaîne de caractère où :
+ * Pour un nombre n > 0, retourner une chaîne de caractère où :
  * - les multiples de 3 sont remplacés par Ae
  * - les multiples de 5 sont remplacés par row
  * - les multiples de 15 sont remplacés par Aerow
