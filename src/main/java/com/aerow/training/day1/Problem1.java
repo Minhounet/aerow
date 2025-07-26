@@ -18,10 +18,32 @@ import static java.util.Objects.requireNonNull;
  *
  * N'utilisez pas d'IA, utilisez la méthode TDD. L'IA est un accélérateur et ne doit pas diminuer vos compétences
  */
+
 public class Problem1 {
 
     public static String generate(int nb) {
-        return null;
+        failIfNbIsLowerOrEqualsThan1(nb);
+        var result = new StringBuilder();
+        for (int i = 1; i <= nb; i++) {
+            result.append(translateNumber(i));
+        }
+        return result.toString();
+    }
+
+    private static String translateNumber(int it) {
+        if (it % 15 == 0)
+            return "Aerow";
+        if (it % 3 == 0)
+            return "Ae";
+        if (it % 5 == 0)
+            return "row";
+        return String.valueOf(it);
+    }
+
+    private static void failIfNbIsLowerOrEqualsThan1(int nb) {
+        if (nb <= 0) {
+            throw new IllegalArgumentException();
+        }
     }
 
     public static void main(String[] args) {
