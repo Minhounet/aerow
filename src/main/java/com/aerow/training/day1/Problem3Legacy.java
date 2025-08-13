@@ -10,12 +10,14 @@ package com.aerow.training.day1;
 public class Problem3Legacy {
 
     public static String translateLevel(String levelCode, String language) {
+        if ("C".equals(levelCode)) {
+            return "Normal";
+        }
         if (language.equals("fr")) {
             return "Facile";
         }
         return switch (levelCode) {
             case "D" -> "Easy";
-            case "C" -> "Normal";
             case "B" -> "Hard";
             case "A" -> "Very Hard";
             default -> "Expert";
