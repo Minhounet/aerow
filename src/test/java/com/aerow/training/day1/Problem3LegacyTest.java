@@ -8,26 +8,26 @@ class Problem3LegacyTest {
 
     @Test
     void Should_return_Easy_When_level_is_D() {
-        assertEquals("Easy", Problem3Legacy.translateLevel("D"));
+        assertEquals("Easy", Problem3Legacy.translateLevel("D", "en"));
     }
 
     @Test
     void Should_return_Normal_When_level_is_C() {
-        assertEquals("Normal", Problem3Legacy.translateLevel("C"));
+        assertEquals("Normal", Problem3Legacy.translateLevel("C", "en"));
     }
 
     @Test
     void Should_return_Hard_When_level_is_B() {
-        assertEquals("Hard", Problem3Legacy.translateLevel("B"));
+        assertEquals("Hard", Problem3Legacy.translateLevel("B", "en"));
     }
 
     @Test
     void Should_return_Very_Hard_When_level_is_A() {
-        assertEquals("Very Hard", Problem3Legacy.translateLevel("A"));
+        assertEquals("Very Hard", Problem3Legacy.translateLevel("A", "en"));
     }
 
     @Test
     void Should_return_Expert_For_any_other_value() {
-        assertEquals("Expert", Problem3Legacy.translateLevel("Z"));
+        assertEquals("Expert", Problem3Legacy.translateLevel("Z", "en"));
     }
 }
