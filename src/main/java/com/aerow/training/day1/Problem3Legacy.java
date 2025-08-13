@@ -9,7 +9,7 @@ package com.aerow.training.day1;
  */
 public class Problem3Legacy {
 
-    public static String translateLevel(String levelCode) {
+    public static String translateLevel(String levelCode, String language) {
         return switch (levelCode) {
             case "D" -> "Easy";
             case "C" -> "Normal";
