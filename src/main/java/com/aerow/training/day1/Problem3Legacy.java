@@ -14,7 +14,11 @@ public class Problem3Legacy {
             return "Normal";
         }
         if (language.equals("fr")) {
-            return "Facile";
+            return switch (levelCode) {
+                case "B" -> "Difficile";
+                case "A" -> "Très Difficile";
+                default -> "Facile";
+            };
         }
         return switch (levelCode) {
             case "D" -> "Easy";

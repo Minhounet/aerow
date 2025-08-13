@@ -40,4 +40,14 @@ class Problem3LegacyTest {
     void Should_return_Normal_When_Level_is_C_as_fr() {
         assertEquals("Normal", Problem3Legacy.translateLevel("C", "fr"));
     }
+
+    @Test
+    void Should_return_Difficile_When_Level_is_B_as_fr() {
+        assertEquals("Difficile", Problem3Legacy.translateLevel("B", "fr"));
+    }
+
+    @Test
+    void Should_return_Tres_Difficile_When_Level_is_A_as_fr() {
+        assertEquals("Très Difficile", Problem3Legacy.translateLevel("A", "fr"));
+    }
 }
