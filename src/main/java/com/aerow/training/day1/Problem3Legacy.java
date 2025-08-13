@@ -17,7 +17,8 @@ public class Problem3Legacy {
             return switch (levelCode) {
                 case "B" -> "Difficile";
                 case "A" -> "Très Difficile";
-                default -> "Facile";
+                case "D" -> "Facile";
+                default -> "Expert";
             };
         }
         return switch (levelCode) {

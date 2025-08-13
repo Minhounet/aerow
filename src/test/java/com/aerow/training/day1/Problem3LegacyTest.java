@@ -50,4 +50,9 @@ class Problem3LegacyTest {
     void Should_return_Tres_Difficile_When_Level_is_A_as_fr() {
         assertEquals("Très Difficile", Problem3Legacy.translateLevel("A", "fr"));
     }
+
+    @Test
+    void Should_return_Expert_When_Level_is_unknown_as_fr() {
+        assertEquals("Expert", Problem3Legacy.translateLevel("S", "fr"));
+    }
 }
