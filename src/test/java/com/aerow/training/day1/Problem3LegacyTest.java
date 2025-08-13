@@ -30,4 +30,9 @@ class Problem3LegacyTest {
     void Should_return_Expert_For_any_other_value() {
         assertEquals("Expert", Problem3Legacy.translateLevel("Z", "en"));
     }
+
+    @Test
+    void Should_return_Facile_When_level_is_D() {
+        assertEquals("Facile", Problem3Legacy.translateLevel("D", "fr"));
+    }
 }
