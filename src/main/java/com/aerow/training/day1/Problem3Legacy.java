@@ -10,9 +10,9 @@ package com.aerow.training.day1;
 public class Problem3Legacy {
 
     public static String translateLevel(String levelCode) {
-        if (levelCode.equals("C")) {
+        if (levelCode.equals("D")) {
             return "Easy";
-        } else if (levelCode.equals("D")) {
+        } else if (levelCode.equals("C")) {
             return "Normal";
         } else if (levelCode.equals("B")) {
             return "Hard";
