@@ -9,7 +9,7 @@ import java.util.List;
  * on évite d'utiliser du tout fait pour l'exercice
  */
 public class Problem7 {
-    public static int sumSquare(List<Integer> numbers) {
+    public static int sumDouble(List<Integer> numbers) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
