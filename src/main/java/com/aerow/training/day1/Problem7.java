@@ -10,7 +10,14 @@ import java.util.List;
  */
 public class Problem7 {
     public static int sumDouble(List<Integer> numbers) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return sumDouble(numbers, 0);
     }
 
+    private static int sumDouble(List<Integer> numbers, int acc) {
+        if (numbers.isEmpty()) {
+            return acc;
+        } else {
+            return sumDouble(numbers.subList(1, numbers.size()), (int) (acc + Math.pow(numbers.get(0), 2)));
+        }
+    }
 }
