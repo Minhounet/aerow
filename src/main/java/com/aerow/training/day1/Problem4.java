@@ -1,6 +1,8 @@
 package com.aerow.training.day1;
 
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Stream;
 
 /*
  * Entrée : liste de String
@@ -16,7 +18,24 @@ import java.util.List;
  */
 public class Problem4 {
 
+    private static final Function<List<String>, List<Integer>> TO_LENGTH =
+            l -> l.stream()
+                    .map(String::length)
+                    .toList();
+
+    private static final Function<List<Integer>, List<Integer>> INSERT_ZERO =
+            l -> l.stream()
+                    .flatMap(length -> Stream.of(length, 0))
+                    .toList();
+
+
+    private static final Function<List<Integer>, List<Integer>> REMOVE_LAST_ELEMENT =
+            l -> l.isEmpty() ? List.of() : l.subList(0, l.size() - 1);
+
     public List<Integer> funkyTransform(List<String> input) {
-        throw new UnsupportedOperationException("Not supported yet.");
+       return TO_LENGTH
+               .andThen(INSERT_ZERO)
+               .andThen(REMOVE_LAST_ELEMENT)
+               .apply(input);
     }
 }
