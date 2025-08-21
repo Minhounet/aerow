@@ -1,5 +1,10 @@
 package com.aerow.training.day1;
 
+import io.vavr.Lazy;
+
+import java.util.List;
+import java.util.function.Function;
+
 /*
  * Soit une phrase :
  * Renvoyer un entier qui correspond à la division (troncature) entre le nombre de lettres et le nombre de mots.
@@ -9,7 +14,23 @@ package com.aerow.training.day1;
  */
 public class Problem6 {
 
+    // My funny solution
     public static int specialDivide(String sentence) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Lazy<List<String>> tokens = Lazy.of(() -> List.of(sentence.split("[ ']")));
+
+        Function<List<String>, List<Integer>> intWithoutEmptyWordsFn = l ->
+                l.stream()
+                        .map(String::length)
+                        .filter(s -> s > 0)
+                        .toList();
+
+        Function<List<Integer>, Integer> sumAndDivide = l -> l.stream()
+                .reduce(0, Integer::sum)
+                / l.size();
+
+        Function<List<String>, Integer> doIt = sumAndDivide.compose(intWithoutEmptyWordsFn);
+
+        return tokens.map(doIt).get();
     }
+
 }
