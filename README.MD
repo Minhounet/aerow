@@ -32,6 +32,7 @@ notamment exécuter les tests unitaires très rapidement.
 ## Les exercices
 
 ### TDD
+
 Voir les classes ci-dessous :
 [Problem0.java](src/main/java/com/aerow/training/day1/Problem0.java)
 [Problem1.java](src/main/java/com/aerow/training/day1/Problem1.java)
@@ -39,6 +40,7 @@ Voir les classes ci-dessous :
 [Problem3Legacy.java](src/main/java/com/aerow/training/day1/Problem3Legacy.java)
 
 ### Programmation fonctionnelle
+
 Voir les classes ci-dessous :
 [Problem4.java](src/main/java/com/aerow/training/day1/Problem4.java)
 [Problem5.java](src/main/java/com/aerow/training/day1/Problem5.java)
