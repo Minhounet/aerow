@@ -1,6 +1,6 @@
 # aerow_dev_training
 
-Le projet pour s'améliorer au développement par trois axes : 
+Le projet comme support de formation pour s'améliorer au développement par trois axes : 
 - le tdd (Test Driven Development) : ou comment aller au cinéma voir son algorithme se dessiner
 - la programmation fonction : ou comment changer de paradigme
 - la clean architecture : ou comment être un petit chef et laisser les autres s'adapter à toi
