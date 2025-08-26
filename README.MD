@@ -38,7 +38,7 @@ Voir les classes ci-dessous :
 [Problem2.java](src/main/java/com/aerow/training/day1/Problem2.java)
 [Problem3Legacy.java](src/main/java/com/aerow/training/day1/Problem3Legacy.java)
 
-### Programmation fonctionnelles
+### Programmation fonctionnelle
 Voir les classes ci-dessous :
 [Problem4.java](src/main/java/com/aerow/training/day1/Problem4.java)
 [Problem5.java](src/main/java/com/aerow/training/day1/Problem5.java)
