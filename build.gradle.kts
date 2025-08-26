@@ -13,6 +13,7 @@ dependencies {
     implementation("io.vavr:vavr:0.10.5")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.mockito:mockito-core:5.19.0")
 }
 
 tasks.test {
