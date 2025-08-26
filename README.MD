@@ -27,4 +27,17 @@ notamment exécuter les tests unitaires très rapidement.
 
 ## Pour voir la solution
 
-Il y a un moyen d'accéder aux différentes solutions mais cela sera incrémental:
+Il y a un moyen d'accéder à certaines solutions mais cela sera incrémental:
+
+```bash
+git switch Problem1 # permet d'accéder à la solution du problème 1
+git switch Problem2 # permet d'accéder à la solution du problème 2 et du problème 1 etc...
+
+git branch -av # voir toutes les branches (et ainsi toutes les solutions)
+
+git switch solution # pour tout avoir, cette branche bouge régulièrement, ne soyez pas surpris
+```
+
+## Auteur
+
+Quang-Minh TRAN (Aerow)
