@@ -34,18 +34,18 @@ notamment exécuter les tests unitaires très rapidement.
 ### TDD
 
 Voir les classes ci-dessous :
-[Problem0.java](src/main/java/com/aerow/training/day1/Problem0.java)
-[Problem1.java](src/main/java/com/aerow/training/day1/Problem1.java)
-[Problem2.java](src/main/java/com/aerow/training/day1/Problem2.java)
-[Problem3Legacy.java](src/main/java/com/aerow/training/day1/Problem3Legacy.java)
+- [Problem0.java](src/main/java/com/aerow/training/day1/Problem0.java)
+- [Problem1.java](src/main/java/com/aerow/training/day1/Problem1.java)
+- [Problem2.java](src/main/java/com/aerow/training/day1/Problem2.java)
+- [Problem3Legacy.java](src/main/java/com/aerow/training/day1/Problem3Legacy.java)
 
 ### Programmation fonctionnelle
 
 Voir les classes ci-dessous :
-[Problem4.java](src/main/java/com/aerow/training/day1/Problem4.java)
-[Problem5.java](src/main/java/com/aerow/training/day1/Problem5.java)
-[Problem6.java](src/main/java/com/aerow/training/day1/Problem6.java)
-[Problem7.java](src/main/java/com/aerow/training/day1/Problem7.java)
+- [Problem4.java](src/main/java/com/aerow/training/day1/Problem4.java)
+- [Problem5.java](src/main/java/com/aerow/training/day1/Problem5.java)
+- [Problem6.java](src/main/java/com/aerow/training/day1/Problem6.java)
+- [Problem7.java](src/main/java/com/aerow/training/day1/Problem7.java)
 
 ### Pour voir les solutions
 
