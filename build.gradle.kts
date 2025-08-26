@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "org.example"
+group = "fr.aerow.training"
 version = "1.0-SNAPSHOT"
 
 repositories {
