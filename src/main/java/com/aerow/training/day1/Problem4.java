@@ -9,7 +9,7 @@ import java.util.List;
  * - mettre des 0 entre chaque nombre
  *
  * Exemple : ["je", "suis", "ici", "et", "là"]
- * Sortie : [2, 0, 4, 0, 2, 0, 2]
+ * Sortie : [2, 0, 4, 0, 3, 0, 2, 0, 2]
  *
  * consigne : pas de boucle ! que du fonctionnel
  *
