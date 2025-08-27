@@ -87,7 +87,8 @@ Ou sinon en ligne de commande
 ./gradlew bootRun
 ```
 
-Et aller sur http://localhost:8080/swagger-ui/index.html pour tester vos webservices
+Et aller sur http://localhost:8080/swagger-ui/index.html pour tester vos webservices, mais n'oubliez pas que vous n'avez
+théoriquement pas besoin de les lancer pour coder vos cas métiers qui peuvent être testés unitairement et avec des mocks !
 
 #### Bonus
 
