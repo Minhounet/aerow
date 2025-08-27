@@ -1,7 +1,5 @@
 package com.aerow.training.day2and3.core.usecase;
 
-import com.aerow.training.day2and3.core.usecase.exception.IngestWordUseCaseRequest;
-
 /**
  * Sauvegarder le mot dans une base
  * - un identifiant unique

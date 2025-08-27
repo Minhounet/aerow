@@ -62,6 +62,38 @@ pour [PDFRequestRepository.java](src/main/java/com/aerow/training/day2/example/c
 Mais vous constatez dans [DefaultSubmitDocumentForPDFGenerationUseCase.java](src/main/java/com/aerow/training/day2/example/core/usecase/DefaultSubmitDocumentForPDFGenerationUseCase.java)
 qu'on a déjà notre cas métier codé sans avoir de réelles implémentations.
 
+### Votre vrai projet
+
+Voir Voir [day2and3](src/main/java/com/aerow/training/day2and3)
+
+Vous devez implémenter deux choses :
+
+#### Accepter un mot
+
+Voir [IngestWordUseCase.java](src/main/java/com/aerow/training/day2and3/core/usecase/IngestWordUseCase.java) : 
+- Vous devez stocker le mot dans une base avec, un identifiant unique, le mot lui-même et sa taille.
+- Vous devez renvoyer l'identifiant
+
+#### Récupérer tous les mots
+
+Voir [GetAllWordsUseCase.java](src/main/java/com/aerow/training/day2and3/core/usecase/GetAllWordsUseCase.java)
+- Vous devez renvoyer tous les mots de la base avec identifiant,le mot et sa taille
+
+#### Pour lancer le projet
+[Application.java](src/main/java/com/aerow/training/day2and3/configuration/spring/Application.java)
+
+Ou sinon en ligne de commande
+```bash
+./gradlew bootRun
+```
+
+Et aller sur http://localhost:8080/swagger-ui/index.html pour tester vos webservices
+
+#### Bonus
+
+Si vous avez le temps, mettez du H2 (base de données), rajouter une fonctionnalité de feature flag
+pour activer ou pas l'action de créer un mot
+
 ### Pour voir les solutions
 
 Il y a un moyen d'accéder à certaines solutions mais cela sera incrémental:

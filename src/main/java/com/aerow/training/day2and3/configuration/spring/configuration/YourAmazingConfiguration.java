@@ -10,6 +10,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+/**
+ * Votre configuration spring à vous, il faut lancer sous Intellij avec
+ * "-Dspring.profiles.active=IPSSI" (ou en ligne de commande avec ./gradlew bootRun --args='--spring.profiles.active=IPSSI')
+ */
 @Configuration
 @Profile("IPSSI")
 public class YourAmazingConfiguration {

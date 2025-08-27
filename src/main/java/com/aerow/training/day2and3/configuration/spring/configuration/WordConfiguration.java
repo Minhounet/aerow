@@ -12,6 +12,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+/**
+ * C'est le profil par défaut avec tout "en mémoire".
+ * Si vous avez fini, vous pouvez utiliser {@link YourAmazingConfiguration} et faire
+ * votre propre implémentation de {@link com.aerow.training.day2and3.core.usecase.service.IdGenerator} et
+ * de {@link WordRepository}.
+ */
 @Configuration
 @Profile("default")
 public class WordConfiguration {

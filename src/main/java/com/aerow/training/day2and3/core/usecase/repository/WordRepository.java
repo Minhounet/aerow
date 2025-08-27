@@ -4,6 +4,9 @@ import com.aerow.training.day2and3.core.domain.Word;
 
 import java.util.List;
 
+/**
+ * Pour stocker, retrouver les mots dans une base
+ */
 public interface WordRepository {
 
     void save(Word word);

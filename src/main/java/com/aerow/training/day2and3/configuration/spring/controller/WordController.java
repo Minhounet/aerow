@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Vos deux endpoints, un pour sauvegarder un mot et l'autre pour tous les récupérer,
+ * à vous d'utiliser les "use cases".
+ *
+ */
 @RestController
 @RequestMapping("/words")
 public class WordController {
@@ -21,7 +26,7 @@ public class WordController {
 
     @PostMapping
     public String saveWord(@RequestBody String word) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Not kebab supported yet.");
     }
 
     @GetMapping
