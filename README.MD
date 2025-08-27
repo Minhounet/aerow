@@ -47,6 +47,10 @@ Voir les classes ci-dessous :
 - [Problem6.java](src/main/java/com/aerow/training/day1/Problem6.java)
 - [Problem7.java](src/main/java/com/aerow/training/day1/Problem7.java)
 
+### vavr
+
+La super bibliothèque fonctionnelle, voir [Problem8.java](src/main/java/com/aerow/training/day1/Problem8.java)
+
 ### Pour voir les solutions
 
 Il y a un moyen d'accéder à certaines solutions mais cela sera incrémental:
