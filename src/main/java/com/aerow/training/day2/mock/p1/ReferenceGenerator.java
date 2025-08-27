@@ -8,10 +8,13 @@ import java.util.function.Supplier;
  */
 public class ReferenceGenerator {
 
+    private final String id;
+
     private final FeatureFlagService featureFlagService;
     private final Supplier<Integer> randomNumberGenerator;
 
-    public ReferenceGenerator(FeatureFlagService featureFlagService,  Supplier<Integer> randomNumberGenerator) {
+    public ReferenceGenerator(String id, FeatureFlagService featureFlagService, Supplier<Integer> randomNumberGenerator) {
+        this.id = id;
         this.featureFlagService = featureFlagService;
         this.randomNumberGenerator = randomNumberGenerator;
     }
