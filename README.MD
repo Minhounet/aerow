@@ -51,6 +51,17 @@ Voir les classes ci-dessous :
 
 La super bibliothèque fonctionnelle, voir [Problem8.java](src/main/java/com/aerow/training/day1/Problem8.java)
 
+### Clean Architecture
+
+Voir le package [example](src/main/java/com/aerow/training/day2/example) qui montre le usecase vu en
+formation.
+
+Il y a actuellement une seule implémentation [InMemoryPDFRequestRepository.java](src/main/java/com/aerow/training/day2/example/infra/inmemory/InMemoryPDFRequestRepository.java)
+pour [PDFRequestRepository.java](src/main/java/com/aerow/training/day2/example/core/usecase/repository/PDFRequestRepository.java).
+
+Mais vous constatez dans [DefaultSubmitDocumentForPDFGenerationUseCase.java](src/main/java/com/aerow/training/day2/example/core/usecase/DefaultSubmitDocumentForPDFGenerationUseCase.java)
+qu'on a déjà notre cas métier codé sans avoir de réelles implémentations.
+
 ### Pour voir les solutions
 
 Il y a un moyen d'accéder à certaines solutions mais cela sera incrémental:
