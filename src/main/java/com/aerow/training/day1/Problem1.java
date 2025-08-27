@@ -13,7 +13,7 @@ import static java.util.Objects.requireNonNull;
  * generate(1) => "1"
  * generate(2) => "12"
  * generate(3) => "12Ae"
- * generate(6) => "12Ae4row6"
+ * generate(6) => "12Ae4rowAe"
  * etc...
  *
  * N'utilisez pas d'IA, utilisez la méthode TDD. L'IA est un accélérateur et ne doit pas diminuer vos compétences
