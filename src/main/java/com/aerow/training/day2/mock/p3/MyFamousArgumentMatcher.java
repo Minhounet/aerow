@@ -15,7 +15,11 @@ public class MyFamousArgumentMatcher {
     }
 
     public void eat(IpssiFood food) {
-        throw new UnsupportedOperationException();
+        if (food.good()) {
+            ipssiRepository.save(food.foodName());
+        } else {
+            throw new FoodNotGoodException(food.foodName() + " is not good");
+        }
     }
 
 }
