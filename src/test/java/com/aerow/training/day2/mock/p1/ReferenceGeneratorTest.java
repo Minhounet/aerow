@@ -9,6 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.function.Supplier;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.lenient;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -28,6 +29,13 @@ class ReferenceGeneratorTest {
     }
 
     @Test
+    void should_return_ref_undefined_When_feature_is_disabled() {
+        // lenient est important pour le tdd pur!
+        lenient().when(featureFlagService.isEnabled("kebabId")).thenReturn(false);
+        assertEquals("ref-undefined", referenceGenerator.generate());
+    }
+
+    @Test
     void should_return_ref_10_When_feature_is_enabled() {
         when(featureFlagService.isEnabled("kebabId")).thenReturn(true);
         when(randomGenerator.get()).thenReturn(10);
@@ -41,9 +49,5 @@ class ReferenceGeneratorTest {
         assertEquals("ref-11", referenceGenerator.generate());
     }
 
-    @Test
-    void should_return_ref_undefined_When_feature_is_disabled() {
-        when(featureFlagService.isEnabled("kebabId")).thenReturn(false);
-        assertEquals("ref-undefined", referenceGenerator.generate());
-    }
+
 }

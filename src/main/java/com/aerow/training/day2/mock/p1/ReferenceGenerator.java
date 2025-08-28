@@ -29,5 +29,4 @@ public class ReferenceGenerator {
         return REF_UNDEFINED;
     }
 
-
 }
