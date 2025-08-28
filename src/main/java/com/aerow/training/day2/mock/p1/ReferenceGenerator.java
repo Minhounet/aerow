@@ -8,6 +8,9 @@ import java.util.function.Supplier;
  */
 public class ReferenceGenerator {
 
+    private static final String PREFIX = "ref-";
+    private static final String REF_UNDEFINED = PREFIX + "undefined";
+
     private final String id;
 
     private final FeatureFlagService featureFlagService;
@@ -19,8 +22,11 @@ public class ReferenceGenerator {
         this.randomNumberGenerator = randomNumberGenerator;
     }
 
-    public int generate() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public String generate() {
+        if (featureFlagService.isEnabled(id)) {
+            return PREFIX + randomNumberGenerator.get();
+        }
+        return REF_UNDEFINED;
     }
 
 
