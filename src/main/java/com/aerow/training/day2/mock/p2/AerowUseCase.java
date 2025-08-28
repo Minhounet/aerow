@@ -13,7 +13,11 @@ public class AerowUseCase {
     }
 
     boolean register(String id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        boolean idAlreadyRegistered = ipssiRepository.exists(id);
+        if (!idAlreadyRegistered) {
+            ipssiRepository.save("ipssi");
+        }
+       return !idAlreadyRegistered;
     }
 
 }
