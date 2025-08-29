@@ -1,11 +1,11 @@
 package com.aerow.training.day2and3.configuration.spring.configuration;
 
-import com.aerow.training.day2.example.core.usecase.service.IdGenerator;
 import com.aerow.training.day2and3.core.usecase.DefaultGetAllWordsUseCase;
 import com.aerow.training.day2and3.core.usecase.DefaultIngestWordUseCase;
 import com.aerow.training.day2and3.core.usecase.GetAllWordsUseCase;
 import com.aerow.training.day2and3.core.usecase.IngestWordUseCase;
 import com.aerow.training.day2and3.core.usecase.repository.WordRepository;
+import com.aerow.training.day2and3.core.usecase.service.IdGenerator;
 import com.aerow.training.day2and3.infra.generator.IPSSIGeneratorId;
 import com.aerow.training.day2and3.infra.inmemory.InMemoryWordRepository;
 import org.springframework.context.annotation.Bean;

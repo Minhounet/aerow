@@ -1,7 +1,7 @@
 package com.aerow.training.day2and3.core.usecase;
 
-import com.aerow.training.day2.example.core.usecase.service.IdGenerator;
 import com.aerow.training.day2and3.core.usecase.repository.WordRepository;
+import com.aerow.training.day2and3.core.usecase.service.IdGenerator;
 
 public class DefaultIngestWordUseCase implements IngestWordUseCase {
 
