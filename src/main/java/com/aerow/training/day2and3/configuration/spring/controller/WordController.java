@@ -35,7 +35,7 @@ public class WordController {
     }
 
     @GetMapping
-    public ResponseEntity<Object> getAllWords() {
+    public ResponseEntity<List<WordEntry>> getAllWords() {
         Try<GetAllWordsUseCaseResponse> userCaseAttempt = Try.of(getAllWordsUseCase::getAllWords);
         return userCaseAttempt.fold(t -> ResponseEntity.internalServerError().build(),
                 response -> ResponseEntity.ok(mapWords(response.words())));
