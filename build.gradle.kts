@@ -26,6 +26,8 @@ dependencies {
     // de qui se mock-t-on !
     testImplementation("org.mockito:mockito-core:5.19.0")
     testImplementation("org.mockito:mockito-junit-jupiter:5.10.0")
+
+    testImplementation("io.vavr:vavr-test:0.10.5")
 }
 
 tasks.test {

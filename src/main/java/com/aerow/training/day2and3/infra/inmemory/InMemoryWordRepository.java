@@ -1,6 +1,7 @@
 package com.aerow.training.day2and3.infra.inmemory;
 
 import com.aerow.training.day2and3.core.domain.Word;
+import com.aerow.training.day2and3.core.domain.WordId;
 import com.aerow.training.day2and3.core.usecase.repository.WordRepository;
 
 import java.util.List;
@@ -17,5 +18,10 @@ public class InMemoryWordRepository implements WordRepository {
     @Override
     public List<Word> getAll() {
         return List.of();
+    }
+
+    @Override
+    public boolean exists(WordId wordId) {
+        return false;
     }
 }

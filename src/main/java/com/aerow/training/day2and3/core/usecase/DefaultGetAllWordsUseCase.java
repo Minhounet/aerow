@@ -1,6 +1,5 @@
 package com.aerow.training.day2and3.core.usecase;
 
-import com.aerow.training.day2and3.core.domain.Word;
 import com.aerow.training.day2and3.core.usecase.repository.WordRepository;
 
 import java.util.List;
@@ -18,6 +17,6 @@ public class DefaultGetAllWordsUseCase implements GetAllWordsUseCase {
 
     @Override
     public GetAllWordsUseCaseResponse getAllWords() {
-        return new GetAllWordsUseCaseResponse(List.of(new Word()));
+        return new GetAllWordsUseCaseResponse(List.of());
     }
 }
