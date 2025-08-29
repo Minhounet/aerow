@@ -12,6 +12,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * C'est le profil par défaut avec tout "en mémoire".
  * Si vous avez fini, vous pouvez utiliser {@link YourAmazingConfiguration} et faire
@@ -34,7 +36,7 @@ public class WordConfiguration {
 
     @Bean
     WordRepository getWordRepository() {
-        return new InMemoryWordRepository();
+        return new InMemoryWordRepository(new ConcurrentHashMap<>());
     }
 
     @Bean

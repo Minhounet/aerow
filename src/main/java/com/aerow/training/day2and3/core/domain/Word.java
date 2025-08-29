@@ -39,6 +39,10 @@ public class Word {
         return wordLength;
     }
 
+    public WordId getWordId() {
+        return wordId;
+    }
+
     public void setWordLength(int wordLength) {
         this.wordLength = wordLength;
     }
