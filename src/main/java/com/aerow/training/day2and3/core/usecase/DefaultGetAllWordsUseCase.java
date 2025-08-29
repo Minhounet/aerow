@@ -17,6 +17,6 @@ public class DefaultGetAllWordsUseCase implements GetAllWordsUseCase {
 
     @Override
     public GetAllWordsUseCaseResponse getAllWords() {
-        return new GetAllWordsUseCaseResponse(List.of());
+        return new GetAllWordsUseCaseResponse(wordRepository.getAll());
     }
 }
