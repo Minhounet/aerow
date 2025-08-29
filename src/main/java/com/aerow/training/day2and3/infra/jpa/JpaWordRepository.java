@@ -8,6 +8,11 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.StreamSupport;
 
+/*
+ * fait très vite sans tdd (c'est pas bien), mais il s'agit principalement d'un passe plat
+ * avec le CrudWordRepository qui utilise CrudRepository et qui fait le travail "tout seul".
+ * Voir WordEntity qui représente un mot dans la base de données.
+ */
 public class JpaWordRepository implements WordRepository {
 
     private final CrudWordRepository crudWordRepository;

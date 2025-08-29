@@ -18,6 +18,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 /**
  * Votre configuration spring à vous, il faut lancer sous Intellij avec
  * "-Dspring.profiles.active=IPSSI" (ou en ligne de commande avec ./gradlew bootRun --args='--spring.profiles.active=IPSSI')
+ *
+ * toute la partie jpa permet de persister en base de données sans "gros travail".
  */
 @Configuration
 @Profile("IPSSI")
