@@ -8,7 +8,7 @@ import java.util.List;
 
 public class InMemoryPDFRequestRepository implements PDFRequestRepository {
 
-    List<PDFRequest> documents = new ArrayList<>();
+    final List<PDFRequest> documents = new ArrayList<>();
 
     @Override
     public String save(PDFRequest pdfRequest) {

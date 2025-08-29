@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class InMemoryPDFRequestRepositoryTest {
 
-    private InMemoryPDFRequestRepository repository = new InMemoryPDFRequestRepository();
+    private final InMemoryPDFRequestRepository repository = new InMemoryPDFRequestRepository();
 
     @Test
     void should_return_request_id_after_save() {

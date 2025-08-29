@@ -46,4 +46,8 @@ public class Word {
     public void setWordLength(int wordLength) {
         this.wordLength = wordLength;
     }
+
+    public String getWord() {
+        return word;
+    }
 }

@@ -1,11 +1,9 @@
 package com.aerow.training.day2and3.configuration.spring.controller;
 
 import com.aerow.training.day2and3.core.domain.Word;
-import com.aerow.training.day2and3.core.domain.WordId;
-import com.aerow.training.day2and3.core.usecase.GetAllWordsUseCase;
-import com.aerow.training.day2and3.core.usecase.IngestWordUseCase;
-import com.aerow.training.day2and3.core.usecase.IngestWordUseCaseRequest;
-import com.aerow.training.day2and3.core.usecase.IngestWordUseCaseResponse;
+import com.aerow.training.day2and3.core.usecase.*;
+import io.vavr.control.Try;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,7 +17,7 @@ import java.util.List;
 @RequestMapping("/words")
 public class WordController {
 
-    private final GetAllWordsUseCase  getAllWordsUseCase;
+    private final GetAllWordsUseCase getAllWordsUseCase;
 
     private final IngestWordUseCase ingestWordUseCase;
 
@@ -29,19 +27,24 @@ public class WordController {
     }
 
     @PostMapping
-    public String saveWord(@RequestBody String word) {
-        IngestWordUseCaseResponse useCaseResponse = ingestWordUseCase.ingestWord(new IngestWordUseCaseRequest(word));
-        return useCaseResponse.wordId();
+    public ResponseEntity<String> saveWord(@RequestBody String word) {
+        Try<IngestWordUseCaseResponse> useCaseResponseAttempt = Try.of(() -> ingestWordUseCase.ingestWord(new IngestWordUseCaseRequest(word)));
+        return useCaseResponseAttempt.fold(t -> ResponseEntity.internalServerError().build(),
+                response -> ResponseEntity.ok(response.wordId()));
+
     }
 
     @GetMapping
-    public List<String> getAllWords() {
-        return getAllWordsUseCase
-                .getAllWords()
-                .words()
-                .stream()
-                .map(Word::getWordId)
-                .map(WordId::id)
+    public ResponseEntity<Object> getAllWords() {
+        Try<GetAllWordsUseCaseResponse> userCaseAttempt = Try.of(getAllWordsUseCase::getAllWords);
+        return userCaseAttempt.fold(t -> ResponseEntity.internalServerError().build(),
+                response -> ResponseEntity.ok(mapWords(response.words())));
+
+    }
+
+    private List<WordEntry> mapWords(List<Word> words) {
+        return words.stream()
+                .map(word -> new WordEntry(word.getWordId().id(), word.getWord(), word.getWordLength()))
                 .toList();
     }
 }
